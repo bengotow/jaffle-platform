@@ -1,10 +1,7 @@
-type: dagster_evidence.EvidenceProject
+type: dagster_dbt.DbtProjectComponent
 
 attributes:
-  project_path: ../../../../jaffle_dashboard
-  asset:
-    key: jaffle_dashboard
-    deps:
-      - target/main/orders
-      - target/main/customers
-  deploy_command: 'echo "Dashboard built at $EVIDENCE_BUILD_PATH"'
+  project: ../../../../dbt/jdbt
+  translation:
+    group_name: bar
+    key: "target/msdsdain/{{ node.name }}"
